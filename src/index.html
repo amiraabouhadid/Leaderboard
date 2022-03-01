@@ -4,11 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h1>Hello webpack!</h1>
+
+    <div class="container-fluid p-5">
+        <h1 class="">Leaderboard</h1>
+        <div class="row gx-5">
+            <div id='recent-scores' class="col p-5">
+                <div class="p-5 row">
+                    <h2 class=" col-8">Recent scores</h2>
+                    <div class="col-4 d-flex align-items-center justify-content-end">
+                        <button id='refresh-button' class='shadow'>Refresh</button>
+                    </div>
+                   
+                </div>
+                <div class='px-5'>
+                    <table class="table table-striped border">
+                        <tbody id='table-display'>
+                          
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <div id='add-score' class="col p-5">
+                <div class="p-5">
+                    <h3>Add your score</h3>
+                </div>
+                <div class="px-5">
+                    <div class=" pb-3">
+                        <input class='w-100' id='name-input' type="text" placeholder="Your name">
+                    </div>
+                    <div class=" pb-3">
+                        <input class='w-100' id='score-input' type="text" placeholder="Your score">
+                    </div>
+                    <div class=" ">
+                        <button id='submit-button' class="shadow submit-button ">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-secondary container-fluid fixed-bottom py-4">
+        <div class="text-center text-light">
+            Copyrights <i class="fas fa-copyright"></i> Amira Abouhadid
+        </div>
+    </div>
+
 </body>
 
 </html>
