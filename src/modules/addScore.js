@@ -1,10 +1,21 @@
-import { getScores } from "./getScores";
+export const addScore = async (gameId, creatGameURL) => {
+  const requestURL = creatGameURL + `/${gameId}/scores/`;
 
-export const addScore = () => {
-  let scores = getScores();
   const name = document.getElementById("name-input").value;
   const score = document.getElementById("score-input").value;
-  scores.push({ name: name, score: score });
-  localStorage.setItem("scores", JSON.stringify(scores));
+  console.log("sending post request");
+  await fetch(requestURL, {
+    method: "POST",
+    body: JSON.stringify({ user: name, score: score }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+    });
+  console.log("post request done, score is added");
+
   window.location.reload();
 };
