@@ -1,11 +1,13 @@
 import _ from "lodash";
 import "./style.css";
-function component() {
-  const element = document.createElement("div");
+import "bootstrap/dist/css/bootstrap.min.css";
 
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+import { addScore } from "./modules/addScore";
+import { displayScores } from "./modules/displayScores";
 
-  return element;
-}
+const submitButton = document.getElementById("submit-button");
+submitButton.onclick = (e) => {
+  addScore();
+};
 
-document.body.appendChild(component());
+displayScores();

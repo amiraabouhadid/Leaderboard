@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack Template
+# Leaderboard
 
->This is a template for webpack bundle of Javascript
+>An application where users can enter their scores and view recent scores. 
 
 ## Built With
 
@@ -21,12 +21,12 @@ To get a local copy up and running follow these simple example steps:
 - Change the current working directory to the location you want the cloned directory.
 - Enter the following:
 ```
-$ git clone git@github.com:amiraabouhadid/webpack-template.git.
+$ git clone git@github.com:amiraabouhadid/Leaderboard.git.
 ```
 - Press Enter to create your local clone.
 - Navigate to the cloned repository by running:
     ```
-    $ cd webpack-template
+    $ cd Leaderboard
     ```
 - Install all dependencies using:
     ``` 
@@ -55,7 +55,7 @@ $ git clone git@github.com:amiraabouhadid/webpack-template.git.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/amiraabouhadid/webpack-template/issues).
+Feel free to check the [issues page](https://github.com/amiraabouhadid/Leaderboard/issues).
 
 ## Show your support
 
