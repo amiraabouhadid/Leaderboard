@@ -3,7 +3,8 @@ export const addScore = async (gameId, creatGameURL) => {
 
   const name = document.getElementById("name-input").value;
   const score = document.getElementById("score-input").value;
-  console.log("sending post request");
+  const loadingText = document.getElementById("loading");
+  loadingText.innerHTML = "Adding score to Leaderboard...please wait";
   await fetch(requestURL, {
     method: "POST",
     body: JSON.stringify({ user: name, score: score }),
@@ -15,7 +16,6 @@ export const addScore = async (gameId, creatGameURL) => {
     .then((json) => {
       console.log(json);
     });
-  console.log("post request done, score is added");
-
-  window.location.reload();
+  loadingText.innerHTML = "Score added to Leaderboard!";
+  setTimeout(window.location.reload(), 5000);
 };
