@@ -12,7 +12,7 @@
 
 ## Live demo
 
-You can visit live version via [link]()
+You can visit live version via [link](https://leader-board-api.netlify.app/)
 
 ## Getting Started
 

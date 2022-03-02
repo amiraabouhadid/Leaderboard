@@ -7,4 +7,10 @@
   overflow-y: scroll;
   height: 35vh;
   display: inline-block;
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+  display: table;
 }
