@@ -1,10 +1,21 @@
-import { getScores } from "./getScores";
+export const addScore = async (gameId, creatGameURL) => {
+  const requestURL = creatGameURL + `/${gameId}/scores/`;
 
-export const addScore = () => {
-  let scores = getScores();
   const name = document.getElementById("name-input").value;
   const score = document.getElementById("score-input").value;
-  scores.push({ name: name, score: score });
-  localStorage.setItem("scores", JSON.stringify(scores));
-  window.location.reload();
+  const loadingText = document.getElementById("loading");
+  loadingText.innerHTML = "Adding score to Leaderboard...please wait";
+  await fetch(requestURL, {
+    method: "POST",
+    body: JSON.stringify({ user: name, score: score }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+    });
+  loadingText.innerHTML = "Score added to Leaderboard!";
+  setTimeout(window.location.reload(), 5000);
 };
